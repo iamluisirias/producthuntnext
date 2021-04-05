@@ -16,6 +16,7 @@ const Layout = props => {
                     :root {
                         --gris: #3d3d3d;
                         --gris2: #6f6f6f;
+                        --gris3: #e1e1e1;
                         --naranja: #da552f;
                     }
 
@@ -59,12 +60,15 @@ const Layout = props => {
                     a {
                         text-decoration: none;
                     }
+
+                    a:visited {
+                        color: unset;
+                    }
                 `}
             />
 
             { /* Informacion meta, lo que iría en el <head> */ }
             <Head>
-                <html lang="es"/>
                 <title>Product Hunt Firebase y Next.js</title>    
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossOrigin="anonymous" />
                 <link rel="preconnect" href="https://fonts.gstatic.com"/>
