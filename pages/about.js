@@ -6,15 +6,10 @@ const Heading = styled.h1`
   color: red;
 `;
 
-
-const Home = () => {
+export default function Home() {
   return (
-    <div>
-      <Layout>
-        <Heading>Inicio</Heading>
-      </Layout>
-    </div>
-  );
-};
-
-export default Home;
+    <Layout>
+      <Heading>Acerca de</Heading>
+    </Layout>
+  )
+}
