@@ -17,6 +17,7 @@ class Firebase {
     }
 
     //Funciones de la clase
+
     //Registrar un nuevo usuario
     async registrar(nombre, email, password) {
 
@@ -28,6 +29,20 @@ class Firebase {
             displayName: nombre
         })
         
+    }
+
+    //Loguear un usuario
+    async loguear(email, password) {
+
+        //Metodo de firebase para iniciar sesion con un correo y password.
+        const usuarioLogueado = await this.auth.signInWithEmailAndPassword(email, password);
+
+        return usuarioLogueado;
+    }
+
+    //Cerrar sesión
+    async logout() {
+        await this.auth.signOut();
     }
 }
 
