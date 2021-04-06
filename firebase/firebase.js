@@ -1,7 +1,9 @@
 import app from 'firebase/app';
 
 //Productos de firebase a utilizar
-import "firebase/auth";
+import 'firebase/auth';
+import 'firebase/firestore';
+import 'firebase/storage';
 
 import firebaseConfig from './config';
 
@@ -12,8 +14,10 @@ class Firebase {
             app.initializeApp(firebaseConfig);
         }
 
-        //Habilitando el producto de autenticacion.
+        //Habilitando los productos para su uso en las intancias de esta clase.
         this.auth = app.auth();
+        this.db = app.firestore();
+        this.storage = app.storage();
     }
 
     //Funciones de la clase
@@ -44,6 +48,7 @@ class Firebase {
     async logout() {
         await this.auth.signOut();
     }
+
 }
 
 //Instancia de la clase Firebase

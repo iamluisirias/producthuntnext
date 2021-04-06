@@ -44,7 +44,6 @@ const Logo = styled.p`
 const Header = () => {
 
     const { usuario, firebase } = useContext(FirebaseContext);
-    console.log(usuario);
 
     //Hasta la proxima
     const cerrarSesion = () => firebase.logout();
