@@ -64,6 +64,10 @@ const Layout = props => {
                     a:visited {
                         color: unset;
                     }
+
+                    img {
+                        max-width: 100%;
+                    }
                 `}
             />
 
