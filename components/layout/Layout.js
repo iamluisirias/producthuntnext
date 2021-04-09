@@ -67,6 +67,7 @@ const Layout = props => {
 
                     img {
                         max-width: 100%;
+                        
                     }
                 `}
             />
@@ -78,6 +79,7 @@ const Layout = props => {
                 <link rel="preconnect" href="https://fonts.gstatic.com"/>
                 <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet"/>
                 <link rel="stylesheet" href="/static/css/app.css"/>
+                <link rel="stylesheet" href="/static/css/spinner.css"/>
             </Head>
 
             <Header/>

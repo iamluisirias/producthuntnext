@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Layout from '../components/layout/Layout';
+import ProductoListado from '../components/layout/ProductoListado';
+import useProducto from '../hooks/useProducto';
 
 const Populares = () => {
-    return (
-        <Layout>
-            <h1>Populares</h1>
-        </Layout>
-    );
+
+  //custom hook
+  const { productos } = useProducto('votos');
+
+  return (
+    <>
+      <Layout>
+        <div className="listado-productos">
+          <div className="contenedor">
+            <ul className="bg-white">
+              {
+                productos.map(producto => (
+                  <ProductoListado 
+                    key={producto.id}
+                    producto={producto}
+                  />
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      </Layout>
+    </>
+  );
 };
 
 export default Populares;
